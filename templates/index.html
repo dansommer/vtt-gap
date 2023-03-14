@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VTT Editor</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>VTT Editor</h1>
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <label for="input-file">Input File</label>
+                <input type="file" id="input-file" name="input_file" required>
+            </div>
+            <div class="form-row">
+                <label for="output-filename">Output Filename</label>
+                <input type="text" id="output-filename" name="output_filename" required>
+            </div>
+            <div class="form-row">
+                <label for="min-gap-length">Minimum Gap Length (in seconds)</label>
+                <input type="number" id="min-gap-length" name="min_gap_length" step="any" min="0" value="2.5" required>
+            </div>
+            <div class="form-row">
+                <label for="output-type">Output Type</label>
+                <div class="output-options">
+                    <label><input type="checkbox" name="output_type" value="edited" checked> Original & AD Potentials </label>
+                    <label><input type="checkbox" name="output_type" value="ad"> AD Potentials</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        {% if download_links %}
+        <div class="download-links">
+            <h2>Download Links:</h2>
+            <ul>
+                {% for link in download_links %}
+                <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

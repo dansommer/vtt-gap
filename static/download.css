@@ -1,0 +1,21 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F8F8F8;
+}
+
+.container-fluid {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  margin-top: 10px;
+}
