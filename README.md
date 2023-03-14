@@ -1,6 +1,6 @@
 # VTT Gap finder
 
-This tool identify potential places for Audio Description narration by using a VTT file containing the dialogue and user input. 
+This tool identifies potential places for Audio Description narration by using a VTT file containing the dialogue and user input. 
 
 The user provides:
 
