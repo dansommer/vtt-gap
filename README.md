@@ -6,7 +6,7 @@ The user provides:
 
 1) VTT file with dialogue (subtitles) or closed captions (SDH - subtitles for deaf and hard of hearing)
 2) Output file name (whatever you want)
-3) Minimum gap duration to detect
+3) Minimum gap duration (seconds) to detect
 4) Desired VTT output(s) (see below)
 
 The script will generate either of both of the following:
